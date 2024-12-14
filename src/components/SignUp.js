@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
 import { TaskContext } from '../context/TaskContext'; // Import TaskContext
 import './SignUp.css';
@@ -10,10 +10,6 @@ const SignUp = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  // Check if there are any users in localStorage on mount (No need to store this value)
-  useEffect(() => {
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
