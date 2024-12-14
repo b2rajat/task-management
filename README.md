@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Task Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a task management app built using React. It allows users to log in, sign up, manage tasks, and log out. The app uses React Router for navigation and Context API for managing the application state. Below is a breakdown of the project structure and files.
 
-## Available Scripts
+## File Structure
 
-In the project directory, you can run:
+src/
 
-### `npm start`
+├── components/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+│   ├── Header.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+│   ├── LoginForm.js
 
-### `npm test`
+│   ├── SignUp.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+│   └── TaskList.js
 
-### `npm run build`
+├── context/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+│   └── TaskContext.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+├── App.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+├── App.css
 
-### `npm run eject`
+├── index.css
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+├── index.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Main Files
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **App.js**  
+   The entry point for the application. It contains the main routing logic and integrates the `TaskProvider` context. The app uses `react-router-dom` to handle the different views:
 
-## Learn More
+   - `/` - Login page (`LoginForm`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   - `/signup` - Sign-up page (`SignUp`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - `/tasks` - Tasks management page (`TaskList`)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Header.js**
 
-### Analyzing the Bundle Size
+The header component is responsible for displaying the app title and the user's information if logged in. It also includes a logout button that clears the user session.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **LoginForm.js**
+The login form where users can input their credentials (username and password). If successfully logged in, users are redirected to the tasks page (/tasks). It checks for an existing user session from local storage.
 
-### Making a Progressive Web App
+3. **SignUp.js**
+The sign-up form where users can create a new account. Once the user is successfully registered, they can log in to manage tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **TaskList.js**
+Displays a list of tasks and allows users to:
 
-### Advanced Configuration
+-  Add a new task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+- Edit task titles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Mark tasks as complete/incomplete
 
-### `npm run build` fails to minify
+- Delete tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+**Flow**
+
+**Login:**
+
+The user enters their credentials in the LoginForm component.
+If the credentials are valid, the user is redirected to the /tasks page.
+User data (username) is saved in localStorage for persistent sessions.
+
+**Sign Up:**
+
+New users can sign up using the SignUp form. Upon successful registration, they can log in using the LoginForm.
+
+**Task Management:**
+
+After logging in, users can manage their tasks on the /tasks page. Tasks are saved in localStorage under the user's name.
+
+**Logout:**
+
+Clicking the logout button on the header will clear the user session and redirect them to the login page.
+
+
+Installation
+
+To get started with the app, clone the repository and install the dependencies:
+
+npm install
+
+npm run start
+
+The app will be available at http://localhost:3000.
