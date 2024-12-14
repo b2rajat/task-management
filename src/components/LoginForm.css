@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #f8f8f8, #e6e6e6); /* Light gradient for a soft background */
+    background: linear-gradient(135deg, #f8f8f8, #e6e6e6);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
@@ -15,7 +15,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Limit width for aesthetic balance */
+    max-width: 400px; 
   }
   
   .login-form h2 {

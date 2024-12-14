@@ -1,6 +1,6 @@
 /* TaskList.css */
 
-/* Overall container for the TaskList component */
+
 .task-list-container {
   width: 100%;
   max-width: 600px;
@@ -12,14 +12,14 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Title of the task list */
+
 .task-list-container h2 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
 }
 
-/* Form for adding tasks */
+
 .task-form {
   display: flex;
   justify-content: space-between;
@@ -64,7 +64,6 @@
   margin-top: 10px;
 }
 
-/* Task List */
 ul {
   list-style-type: none;
   padding: 0;
@@ -97,7 +96,7 @@ ul li button {
   transition: background-color 0.3s ease;
 }
 
-/* Toggle task completion button styles */
+
 ul li button:first-child {
   background-color: #4caf50;
   color: white;
@@ -107,7 +106,7 @@ ul li button:first-child:hover {
   background-color: #45a049;
 }
 
-/* Delete task button styles */
+
 ul li button:last-child {
   background-color: #f44336;
   color: white;
@@ -117,7 +116,6 @@ ul li button:last-child:hover {
   background-color: #e53935;
 }
 
-/* Strikethrough for completed tasks */
 ul li.completed {
   text-decoration: line-through;
   color: gray;

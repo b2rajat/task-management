@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 
 const LoginForm = () => {
-  const { setUser, setTasks } = useContext(TaskContext); // Get setUser and setTasks from context
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const { setUser, setTasks } = useContext(TaskContext); 
+  const navigate = useNavigate(); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -19,7 +19,7 @@ const LoginForm = () => {
       setTasks(savedTasks); // Fetch the tasks immediately
       navigate('/tasks');
     }
-  }, [navigate, setTasks]); // Empty dependency array to only run once on mount
+  }, [navigate, setTasks]); 
 
   const handleLogin = (e) => {
     e.preventDefault();

@@ -5,10 +5,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #f5f5f5; /* Light grey background */
-    color: #333; /* Dark text for contrast */
+    background-color: #f5f5f5; 
+    color: #333; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
   }
   
@@ -16,7 +16,7 @@
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #333; /* Dark text color for readability */
+    color: #333; 
   }
   
   .user-info {
@@ -28,11 +28,11 @@
     margin-right: 20px;
     font-size: 18px;
     font-weight: 500;
-    color: #555; /* Lighter text for welcome message */
+    color: #555; 
   }
   
   .logout-button {
-    background-color: #007bff; /* Bright blue button */
+    background-color: #007bff; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -43,13 +43,13 @@
   }
   
   .logout-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Lift effect on hover */
+    background-color: #0056b3; 
+    transform: translateY(-2px); 
   }
   
   .logout-button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus effect */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
   }
   
   @media (max-width: 768px) {

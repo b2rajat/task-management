@@ -5,7 +5,7 @@ export const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [tasks, setTasks] = useState([]); // Defaulting to an empty array
+  const [tasks, setTasks] = useState([]); 
 
   useEffect(() => {
     // Retrieve current user from localStorage
@@ -16,7 +16,7 @@ export const TaskProvider = ({ children }) => {
       const savedTasks = JSON.parse(localStorage.getItem(`tasks_${savedUser.username}`)) || [];
       setTasks(savedTasks);  // Default to empty array if no tasks are found
     }
-  }, []); // This will run once when the component mounts
+  }, []); 
 
   const addTask = (taskTitle) => {
     const newTask = { title: taskTitle, completed: false };
@@ -32,7 +32,7 @@ export const TaskProvider = ({ children }) => {
   const toggleTaskCompletion = (taskIndex) => {
     const updatedTasks = tasks.map((task, index) => {
       if (index === taskIndex) {
-        return { ...task, completed: !task.completed }; // Toggle completion
+        return { ...task, completed: !task.completed }; 
       }
       return task;
     });

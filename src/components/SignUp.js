@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
-import { TaskContext } from '../context/TaskContext'; // Import TaskContext
+import { useNavigate, Link } from 'react-router-dom'; 
+import { TaskContext } from '../context/TaskContext'; 
 import './SignUp.css';
 
 const SignUp = () => {
-  const { setUser, setTasks } = useContext(TaskContext); // Get setUser and setTasks from context
+  const { setUser, setTasks } = useContext(TaskContext); 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');

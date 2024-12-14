@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { TaskContext } from '../context/TaskContext';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
-import './TaskList.css'; // Import the CSS for styling
+import { useNavigate } from 'react-router-dom';
+import './TaskList.css'; 
 
 const TaskList = () => {
   const { tasks, addTask, toggleTaskCompletion, deleteTask, updateTaskTitle } = useContext(TaskContext);
@@ -9,7 +9,7 @@ const TaskList = () => {
   const [error, setError] = useState('');
   const [editingIndex, setEditingIndex] = useState(null); // Track which task is being edited
   const [editedTitle, setEditedTitle] = useState('');
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate(); 
 
   // Redirect to login page if no user is logged in
   useEffect(() => {
@@ -51,9 +51,9 @@ const TaskList = () => {
       return;
     }
 
-    updateTaskTitle(editingIndex, editedTitle); // Update the task title in the context
-    setEditingIndex(null); // Clear the edit state
-    setEditedTitle(''); // Reset the edited title
+    updateTaskTitle(editingIndex, editedTitle); 
+    setEditingIndex(null); 
+    setEditedTitle(''); 
     setError('');
   };
 

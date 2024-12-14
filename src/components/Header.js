@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TaskContext } from '../context/TaskContext'; // Import the context
-import './Header.css';  // Import the new CSS file
+import { TaskContext } from '../context/TaskContext'; 
+import './Header.css'; 
 
 const Header = () => {
-  const { user, logout } = useContext(TaskContext); // Destructure user and logout from context
+  const { user, logout } = useContext(TaskContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout(); // Call logout to clear user session
-    navigate('/'); // Redirect to login page after logout
+    logout();
+    navigate('/'); 
   };
 
   return (
