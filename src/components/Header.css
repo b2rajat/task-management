@@ -1,0 +1,75 @@
+/* Header.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333; /* Dark text for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+    transition: background-color 0.3s ease;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #333; /* Dark text color for readability */
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .welcome-text {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555; /* Lighter text for welcome message */
+  }
+  
+  .logout-button {
+    background-color: #007bff; /* Bright blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  .logout-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Focus effect */
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 30px;
+    }
+  
+    .header h1 {
+      font-size: 24px;
+    }
+  
+    .user-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logout-button {
+      margin-top: 10px;
+    }
+  }
+  
